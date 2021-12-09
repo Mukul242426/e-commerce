@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>DMEZ | E-Shopper</title>
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="public/css/font-awesome.min.css" rel="stylesheet">
+	<link href="public/css/prettyPhoto.css" rel="stylesheet">
+	<link href="public/css/price-range.css" rel="stylesheet">
+	<link href="public/css/animate.css" rel="stylesheet">
+	<link href="public/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="public/css/footer1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="public/css/status.css">
+	<style>
+		.empty {
+			height: 400px !important;
+		}
+
+		.empty>p {
+			color: grey;
+			font-weight: bold;
+			font-size: 1.3rem !important;
+			margin: auto;
+		}
+	</style>
+	<link rel="stylesheet" href="public/css/responsive.css">
+	<link rel="stylesheet" href="/public/css/header.css">
+	<link rel="stylesheet" href="/public/css/product.css">
+	<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<!--/head-->
+
+<body>
+	<!--status-->
+	<div style="background-color:brown" class="status">
+		<p></p>
+		<span onclick="closeStatus(event)"><i class="fas fa-window-close"></i></span>
+	  </div>
+	  <!--status-->
+	<header>
+		<nav>
+			<div id="navbar">
+				<div id="logo" class="reverse">
+					<div class="mobile-btn" style="font-size:30px;cursor:pointer; font-weight:bold;margin-top: 10px;"
+						onclick="openNav()">&#9776;</div>
+
+					<div class="logo" style="margin-left: 15px;"><a href="/"><img src="public/images/dmez.png"
+								width="45" height="64"></img>
+						</a></div>
+
+
+				</div>
+
+
+				<sub-header id="links">
+					<br>
+					<div class="search-bar">
+
+						<div class="search">
+							<form class="search-container">
+								<input type="text" id="search-bar" name="data" placeholder="Search for medicines">
+								<button><i id="icon" class="fas fa-search"></i></button>
+							</form>
+						</div>
+
+					</div>
+				</sub-header>
+
+
+
+
+
+
+				<div id="links">
+
+					<a href="/products">Shop</a>
+					<a href="/account"><i class="fas fa-user-circle"></i> Account</a>
+					<a href="/cart"> <i class="fas fa-shopping-cart"></i> Cart</a>
+
+				</div>
+			</div>
+
+		</nav>
+		<!-- Mobile Menu -->
+		<div id="mySidenav" class="sidenav">
+			<a style="cursor:pointer;" class="closebtn" onclick="closeNav()">&times;</a>
+			<a style="color: #A1B985;">Howdy!</a>
+			<a href="/">Home</a>
+			<a href="/products">Shop</a>
+			<a href="/cart">  Cart</a>
+			<a href="/account"> Account</a>
+			
+			<a href="/products">Contact</a>
+			<div class="search">
+				<form class="search-container">
+					<input type="text" id="search-bar" placeholder="Search for medicines" style="border: 1px solid #A1B985">
+					<a href="#"><i id="icon" class="fas fa-search" ></i></a>
+				</form>
+
+			</div>
+		</div>
+	</header>
+	<br>
+
+	<section id="advertisement">
+		<div class="container">
+			<img src="public/images/advertisement.jpg" alt="" />
+		</div>
+	</section>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<!-- <div class="left-sidebar">
+						<h2>Category</h2>
+						<div class="panel-group category-products" id="accordian">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											text
+										</a>
+									</h4>
+								</div>
+								<div id="sportswear" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">text </a></li>
+											<li><a href="">text </a></li>
+											<li><a href="">text </a></li>
+											<li><a href="">text</a></li>
+											<li><a href="">text </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											text
+										</a>
+									</h4>
+								</div>
+								<div id="mens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">text</a></li>
+											<li><a href="">text</a></li>
+											<li><a href="">text</a></li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#womens">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											text
+										</a>
+									</h4>
+								</div>
+								<div id="womens" class="panel-collapse collapse">
+									<div class="panel-body">
+										<ul>
+											<li><a href="">text</a></li>
+											<li><a href="">text</a></li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title"><a href="#">text</a></h4>
+								</div>
+							</div>
+						</div>
+						
+						
+						/category-productsr-->
+
+					<!-- <div class="brands_products">
+							<h2>Brands</h2>
+							<div class="brands-name">
+								<ul class="nav nav-pills nav-stacked">
+									<li><a href=""> <span class="pull-right">(50)</span>text</a></li>
+									<li><a href=""> <span class="pull-right">(56)</span>text</a></li>
+									<li><a href=""> <span class="pull-right">(27)</span>text</a></li>
+									<li><a href=""> <span class="pull-right">(32)</span>text</a></li>
+									<li><a href=""> <span class="pull-right">(5)</span>texty</a></li>
+									<li><a href=""> <span class="pull-right">(9)</span>text</a></li>
+									<li><a href=""> <span class="pull-right">(4)</span>text</a></li>
+								</ul>
+							</div>
+						</div> -->
+
+					<!-- <div class="price-range">
+							<h2>Price Range</h2>
+							<div class="well">
+								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+								 <b>$ 0</b> <b class="pull-right">$ 600</b>
+							</div>
+						</div> -->
+
+					<!-- <div class="shipping text-center">
+							<img src="images//shipping.jpg" alt="" />
+						</div> -->
+
+				</div>
+			</div>
+
+			<!--MAIN-START-->
+			<div class="col-sm-12 padding-right" id="main_container">
+				<h2 class="title text-center">Features Items</h2>
+				<!--features_items-->
+				<div class="features_items empty">
+
+					<!---->
+					<div class="loader">
+
+					</div>
+					<!--
+					<div class="col-sm-4">
+						<div class="product-image-wrapper">
+							<div class="single-products">
+								<div class="productinfo text-center">
+									<img src="/public/images/medicine.jpg" alt="" />
+
+									<div class="discounts">
+										<h2>₹84 </h2>
+										<h5 style="color: #9797A3;"><del>₹98</del></h5>
+										<p id="off" style="color: #00A500;"> 15%off</p>
+									</div>
+									<p>Medicine</p>
+									<span onclick="addToCart(event)" class="btn btn-default add-to-cart"><i
+											class="fa fa-shopping-cart"></i>Add to cart</span>
+								</div>
+							</div>
+							<br>
+							<style>
+								.discounts h2,
+								h5,
+								#off {
+									display: inline-block;
+								}
+							</style>
+							<div class="choose">
+								<ul class="nav nav-pills nav-justified">
+								   <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+								</ul>
+						   </div> 
+						</div>
+					</div>-->
+
+
+				</div>
+
+				<!--features_items-->
+				<ul class="pagination">
+					<li style="color: grey;" id="prev" onclick="navigateToPage(event)">
+						<i class="fa fa-arrow-left"></i>&nbsp;Previous
+					</li>
+					<li><i class="fas fa-page"></i>1</li>
+					<li style="color: grey;" id="next" onclick="navigateToPage(event)">Next&nbsp;
+						<i class="fa fa-arrow-right"></i>
+					</li>
+				</ul>
+			</div>
+			<!--MAIN-END-->
+
+		</div>
+		</div>
+	</section>
+
+	<!--FOOTER START-->
+	<footer class="site-footer" >
+		<div class="container">
+		  <div class="row">
+			<div class="col-lg-3 col-md-12 ">
+			  <h4><span style="color: #E5CAAF;" >Guaranteed 100%</span> Orginal items</h4>
+			  <br>
+			  <h6>Company</h6>
+			  <ul class="footer-links">
+				<li><a href="/career">Career</a></li>
+				<li><a href="/aboutus">About Us</a></li>
+				<li><a href="/partner-dmez">Partner with DMEZ</a></li>
+				<h6>Our Services</h6>
+				<li><a href="/products">Our Medicine</a></li>
+				<li><a href="/products">Ayurvedic Products</a></li>
+				<li><a href="/products">Organic Food</a></li>
+	  
+			  </ul>
+			</div>
+	  
+			<div class="col-lg-3 col-md-12 ">
+			  <h4> <span style="color: #E5CAAF;">Easy Returns</span> on each damaged items</h4>
+			  <br>
+			  <h6>Featured Categories</h6>
+			  <ul class="footer-links">
+				<li><a href="/products">Personal Care</a></li>
+				<li><a href="/products">Daily Essentials</a></li>
+				<li><a href="/products">Ayurvedic Store</a></li>
+				<li><a href="/products">Mother & Baby care</a></li>
+				<li><a href="/products">Sexual Wellness</a></li>
+				<li><a href="/products">Diabetic care</a></li>
+				<li><a href="/products">Nutrition & Suppliments</a></li>
+				<li><a href="/products">Proteins & Vitamins</a></li>
+	  
+			  </ul>
+			</div>
+	  
+			<div class="col-lg-3 col-md-12 ">
+			  <h4> <span style="color: #E5CAAF;">Free delivery for every</span> order more than Rs400</h4>
+			  <br>
+			  <h6>Need Help</h6>
+			  <ul class="footer-links">
+				<li><a href="">Browse All Medicines</a></li>
+				<!-- <li><a href="">Browse All Molecules</a></li> -->
+				<!-- <li><a href="">FAQs</li> -->
+				<li><a href="/contact">Contact</a></li>
+				<h6>Policy Info</h6>
+				<!-- <li><a href="">Editorial Policy</a></li> -->
+				<li><a href="/privacy&policy">Privacy Policy</li>
+				<li><a href="/term&conditions">Terms and condition</a></li>
+			  </ul>
+			</div>
+	  
+			<div class="col-lg-3 col-md-12 ">
+			  <h4><span style="color: #E5CAAF;">Guaranteed discount</span> on every products</h4>
+			  <br>
+			  <h6>Dmez</h6>
+			  <ul class="footer-links">
+				<p>DMEZ is not just another company in the areas of healthcare as its resolve is to bring a
+				  revolution in the areas of healthcare space to start with. It doesn't want to just deliver
+				  medicines but also want to make you small. </p>
+	  
+			  </ul>
+			</div>
+		  </div>
+		  <hr>
+		</div>
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-8 col-sm-6 col-xs-12">
+			  <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+				<a href="#">Dmez</a>.
+			  </p>
+			</div>
+	  
+			<div class="col-md-4 col-sm-6 col-xs-12">
+			  <ul class="social-icons">
+				<li><a class="facebook" href="https://www.facebook.com/dmezhealthcare/"><i
+					  class="fab fa-facebook"></i></a></li>
+				<li><a class="twitter" href="https://twitter.com/dmezhealthcare"><i
+					  class="fab fa-twitter"></i></a></li>
+				<li><a class="dribbble" href="https://www.instagram.com/dmez.healthcare/"><i
+					  class="fab fa-instagram"></i></a></li>
+				<li><a class="linkedin" href="https://www.linkedin.com/company/dmez/"><i
+					  class="fab fa-linkedin"></i></a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+	<!--FOOTER START-->
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+
+	</script>
+	<script src="public/js/jquery.js"></script>
+	<script src="public/js/price-range.js"></script>
+	<script src="public/js/jquery.scrollUp.min.js"></script>
+	<script src="public/js/bootstrap.min.js"></script>
+	<script src="public/js/jquery.prettyPhoto.js"></script>
+	<script src="public/js/main.js"></script>
+
+	<!--main_js-->
+	<script defer src="/public/main_js/status.js"></script>
+	<script defer src="/public/main_js/search.js"></script>
+	<script defer src="/public/main_js/products.js"></script>
+</body>
+
+</html>
