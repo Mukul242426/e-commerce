@@ -2,7 +2,7 @@ const productId = window.location.pathname.split("/")[2];
 const productEl = document.querySelectorAll(".product_details");
 const gallery = document.querySelector(".xzoom-container");
 const [title, id, price, description] = productEl;
-origin = "https://admin.dmez.in";
+origin = "https://admin.medicine-mart.in";
 function removeLoader() {
   const container = document.querySelector(".get-container");
   container.removeChild(container.children[0]);

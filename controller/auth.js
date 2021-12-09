@@ -63,8 +63,8 @@ exports.login = catchAsync(async (req, res, next) => {
     domain: process.env.COOKIE_ORIGIN,
     path: "/",
     maxAge: 90 * 60 * 60 * 1000,
-    httpOnly: false,
-    secure: false,
+    httpOnly: true,
+    secure: true,
     sameSite: "none",
   });
   res.json({

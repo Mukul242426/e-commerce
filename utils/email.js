@@ -14,7 +14,7 @@ exports.sendMailToClient = async (options) => {
 
   //Define email options
   const mailOptions = {
-    from: `DMEZ <${process.env.EMAIL_USERNAME}>`,
+    from: `medicine-mart <${process.env.EMAIL_USERNAME}>`,
     to: options.email,
     subject: options.subject,
     text: options.message,
@@ -37,7 +37,7 @@ exports.sendMailToAdmin = async (options) => {
 
   //Define email options
   const mailOptions = {
-    from: `DMEZ <${process.env.EMAIL_USERNAME}>`,
+    from: `medicine-mart <${process.env.EMAIL_USERNAME}>`,
     to: options.email,
     subject: options.subject,
     text: options.message,

@@ -94,7 +94,7 @@ const bulkOrderSchema = Schema({
   }
 });
 
-//PARTNER WITH DMEZ
+//PARTNER WITH medicine-mart
 const partnerSchema = Schema({
   name: {
     type: String,

@@ -25,8 +25,8 @@ router.get("/term&conditions", (req, res) => renderStaticPage(res, "tnc.html"));
 router.get("/privacy&policy", (req, res) =>
   renderStaticPage(res, "privacy-policy.html")
 );
-router.get("/partner-dmez", (req, res) =>
-  renderStaticPage(res, "partner-dmez.html")
+router.get("/partner-medicine-mart", (req, res) =>
+  renderStaticPage(res, "partner-medicine-mart.html")
 );
 router.get("/aboutus", (req, res) => renderStaticPage(res, "aboutus.html"));
 router.get("/track", (req, res) => renderStaticPage(res, "track.html"));

@@ -104,7 +104,7 @@ exports.updateOrderStatus = catchAsync(async (req, res, next) => {
   mail.sendMailToAdmin({
     subject: `Order ${state} by user`,
     email: order.address.email,
-    message: `${order.address.name} ${state} the order. Order details <a href="${req.protocol}://admin.dmez.in/orders/${order._id}">here</a>`,
+    message: `${order.address.name} ${state} the order. Order details <a href="${req.protocol}://admin.medicine-mart.in/orders/${order._id}">here</a>`,
   });
 
   res.status(200).json({

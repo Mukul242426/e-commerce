@@ -3,7 +3,7 @@ const app = require('./app');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3001;
 
-mongoose.connect(process.env.MONGOURI || "mongodb://127.0.0.1:27017/dmez", {
+mongoose.connect(process.env.MONGOURI || "mongodb://127.0.0.1:27017/medicine-mart", {
   useNewUrlParser: true,
   useUnifiedTopology:true,
   useCreateIndex:true,

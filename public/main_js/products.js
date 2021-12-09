@@ -39,7 +39,7 @@ function checkDiscount(price, discount) {
 
 function productTemp({ _id, title, price, discount, coverImage }) {
   const imgUrl = coverImage
-    ? `https://admin.dmez.in/${coverImage}`
+    ? `https://admin.medicine-mart.in/${coverImage}`
     : `/public/images/default.png`;
   return `
     <div class="col-sm-4" id="${_id}">
