@@ -13,37 +13,39 @@ function formatImage(coverImage, images) {
     images.push(coverImage);
   }
 
-  if (!images.length) {
+  if (!images.length || images[0] !== "[]") {
     gallery.children[0].src = `/public/images/default.png`;
     gallery.children[0].src = `/public/images/default.png`;
     return;
   }
 
-  images.forEach((image, index) => {
-    const a = document.createElement("a");
-    const img = document.createElement("img");
-    a.href = `${origin}/${image}`;
+  if (images[0] !== "[]") {
+    images.forEach((image, index) => {
+      const a = document.createElement("a");
+      const img = document.createElement("img");
+      a.href = `${origin}/${image}`;
 
-    img.src = `${origin}/${image}`;
-    img.classList.add = "xzoom-gallery";
-    img.width = "90";
+      img.src = `${origin}/${image}`;
+      img.classList.add = "xzoom-gallery";
+      img.width = "90";
 
-    if (index === 0) {
-      gallery.children[0].src = `${origin}/${image}`;
-      gallery.children[0].src = `${origin}/${image}`;
-      img.xpreview = `${origin}/${image}`;
-    }
+      if (index === 0) {
+        gallery.children[0].src = `${origin}/${image}`;
+        gallery.children[0].src = `${origin}/${image}`;
+        img.xpreview = `${origin}/${image}`;
+      }
 
-    a.appendChild(img);
-    gallery.children[1].appendChild(a);
-  });
+      a.appendChild(img);
+      gallery.children[1].appendChild(a);
+    });
+  }
 }
 
 async function addToCart() {
   try {
     const res = await fetch(`/api/v1/cart/${productId}`, {
       method: "PATCH",
-      credentials:"include"
+      credentials: "include"
     });
     const response = await res.json();
     showStatus(response);
